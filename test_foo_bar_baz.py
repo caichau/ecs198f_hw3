@@ -32,27 +32,28 @@ def test_divisible_by_none():
 
 
 def test_str_length():
-    for i in range(50):
+    for i in range(0, 50, 1):
         str = foo_bar_baz(i)
-        assert len(str) == i
+        str_split = str.split()
+        assert len(str_split) == i
 
 
 def test_word_counts():
 
-    for n in range(50): # Loop through range of n values. 
+    for n in range(0, 50, 1): # Loop through range of n values. 
         baz_count = 0
         bar_count = 0
         foo_count = 0
         str = foo_bar_baz(n)
-        for j in range(n + 1): # For each n value, count the number of baz, bar, and foo in str.
-            if (n % 3 == 0) and (i % 5 == 0):
+        for i in range(1, n + 1, 1): # For each n value, count the number of baz, bar, and foo in str.
+            if (i % 3 == 0) and (i % 5 == 0):
                 baz_count += 1
-            elif (n % 3 == 0):
+            elif (i % 3 == 0):
                 foo_count += 1
-            elif (n % 5 == 0):
+            elif (i % 5 == 0):
                 bar_count += 1
         
-        # Check that there are correct number of baz, bar, and foos. 
-        assert baz_count == str.count("Baz")
-        assert bar_count == str.count("Bar")
-        assert foo_count == str.count("foo")
+        # Check that there are correct number of baz, foo, and bars. 
+        assert baz_count == str.count('Baz')
+        assert foo_count == str.count('Foo')
+        assert bar_count == str.count('Bar')
