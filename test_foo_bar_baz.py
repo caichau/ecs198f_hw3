@@ -115,7 +115,7 @@ def test_check_index_of_bar():
         assert bar_index1 == bar_index2
 
     
-def test_check_int_values(): # Check that the int values in the string are correct. 
+def test_check_int_values(): # Check that the int values in the string are correct and in the right place. 
 
     for n in range(0, 50, 1):
 
