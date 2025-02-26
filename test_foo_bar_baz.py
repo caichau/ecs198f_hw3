@@ -12,26 +12,38 @@ from foo_bar_baz import foo_bar_baz
 #Add testcases Here
 
 def test_input_zero():
+    from foo_bar_baz import foo_bar_baz
+
     assert foo_bar_baz(0) == "" # Nothing should be printed if input is 0.
 
 
 def test_input_negative():
+    from foo_bar_baz import foo_bar_baz
+
     assert foo_bar_baz(-6) == "" # Nothing should be printed if input is negative.
 
 
 def test_divisible_by_only_one_number():
+    from foo_bar_baz import foo_bar_baz
+
     assert foo_bar_baz(5) == "1 2 Foo 4 Bar"
 
 
 def test_divisible_by_both_numbers():
+    from foo_bar_baz import foo_bar_baz
+
     assert foo_bar_baz(15) == "1 2 Foo 4 Bar Foo 7 8 Foo Bar 11 Foo 13 14 Baz"
 
 
 def test_divisible_by_none():
+    from foo_bar_baz import foo_bar_baz
+
     assert foo_bar_baz(2) == "1 2"
 
 
 def test_str_length():
+    from foo_bar_baz import foo_bar_baz
+
     for i in range(0, 50, 1):
         str = foo_bar_baz(i)
         str_split = str.split()
@@ -39,6 +51,7 @@ def test_str_length():
 
 
 def test_word_counts():
+    from foo_bar_baz import foo_bar_baz
 
     for n in range(0, 50, 1): # Loop through range of n values. 
         baz_count = 0
@@ -58,7 +71,10 @@ def test_word_counts():
         assert foo_count == str.count('Foo')
         assert bar_count == str.count('Bar')
 
+
 def test_check_index_of_baz():
+    from foo_bar_baz import foo_bar_baz
+
     for n in range(0, 50, 1): # Loop through range of n values. 
         baz_index1 = []
         baz_index2 = []
@@ -78,6 +94,8 @@ def test_check_index_of_baz():
 
 
 def test_check_index_of_foo():
+    from foo_bar_baz import foo_bar_baz
+
     for n in range(0, 50, 1): # Loop through range of n values. 
         foo_index1 = []
         foo_index2 = []
@@ -97,6 +115,8 @@ def test_check_index_of_foo():
 
 
 def test_check_index_of_bar():
+    from foo_bar_baz import foo_bar_baz
+
     for n in range(0, 50, 1): # Loop through range of n values. 
         bar_index1 = []
         bar_index2 = []
@@ -116,6 +136,7 @@ def test_check_index_of_bar():
 
     
 def test_check_int_values(): # Check that the int values in the string are correct and in the right place. 
+    from foo_bar_baz import foo_bar_baz
 
     for n in range(0, 50, 1):
 
@@ -129,5 +150,7 @@ def test_check_int_values(): # Check that the int values in the string are corre
 
 
 def test_return_type():
+    from foo_bar_baz import foo_bar_baz
+    
     ret_val = foo_bar_baz(15)
     assert str(type(ret_val)) == "<class 'str'>"
