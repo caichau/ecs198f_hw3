@@ -126,3 +126,8 @@ def test_check_int_values(): # Check that the int values in the string are corre
             if (i % 3 != 0) and (i % 5 != 0):
                 # Then the value should be an int. 
                 assert int(str_split[i-1]) == i
+
+
+def test_return_type():
+    ret_val = foo_bar_baz(15)
+    assert str(type(ret_val)) == "<class 'str'>"
