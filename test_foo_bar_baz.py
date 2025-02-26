@@ -76,6 +76,7 @@ def test_check_index_of_baz():
 
         assert baz_index1 == baz_index2
 
+
 def test_check_index_of_foo():
     for n in range(0, 50, 1): # Loop through range of n values. 
         foo_index1 = []
@@ -94,6 +95,7 @@ def test_check_index_of_foo():
 
         assert foo_index1 == foo_index2
 
+
 def test_check_index_of_bar():
     for n in range(0, 50, 1): # Loop through range of n values. 
         bar_index1 = []
@@ -111,3 +113,16 @@ def test_check_index_of_bar():
                 bar_index2.append(j)
 
         assert bar_index1 == bar_index2
+
+    
+def test_check_int_values(): # Check that the int values in the string are correct. 
+
+    for n in range(0, 50, 1):
+
+        str = foo_bar_baz(n)
+        str_split = str.split()
+
+        for i in range(1, n + 1, 1): # Get indices of int instances. 
+            if (i % 3 != 0) and (i % 5 != 0):
+                # Then the value should be an int. 
+                assert int(str_split[i-1]) == i
